@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo - List Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    table{
+        width: 100%;   
+    }
+    
+    table#tb01 tr:nth-child(even){
+        background-color: aqua;
+        color: blue;
+    }
+
+    table#tb01 tr:nth-child(odd){
+        background-color: brown;
+        color: cornflowerblue;
+    }
+
+    table#tb01 th{
+        background-color: black;
+        color: white;
+    }
+
+</style>
+<body>
+    <a href='/'>Home</a>
+    <a href='/newtask'>Add New Tasks</a> 
+    <table id='tb01'>
+        <tr>
+            <th>Name</th>
+            <th>Due Date</th>
+            <th>Description</th>
+        </tr>
+        <% for(let i = 0; i < tasks.length; i++) {%>
+            <tr>
+                <td><%= tasks[i].taskname %></td>
+                <td><%= tasks[i].taskdue %></td>
+                <td><%= tasks[i].taskdesc %></td>
+            </tr>
+        <%}%>
+    </table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo - Add New Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href='/'>Home</a>
+    <a href='/listtasks'>List Tasks</a> 
+    <form action='/addTaskInfo' method='POST'>
+        Task Name: <input type='text' name='taskname'/><br/>
+        Task Due: <input type='text' name='taskdue'/><br/>
+        Task Desc: <input type='text' name='taskdesc'/><br/>
+        <button type='submit'>Submit</button>
+    </form>
+</body>
+</html>
